@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import variant from '../../assets/images/variant.jpg'
 export default class Card extends Component {
   render() {
     return (
       <div className='card'>
-        <img src={variant} alt='card' />
+        <img src={this.props.Image} alt='card' />
         <div className='card-content'>
-            <h2>Ethiopian Food</h2>
-            <p className='price'><span className='pr'>Price : </span>120 Birr <span className='oldPrice'>150 Birr</span></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+            <h2>{this.props.title}</h2>
+            <p className='price'><span className='pr'>Price : </span>{this.props.price} Birr <span className='oldPrice'>{this.props.oldPrice} Birr</span></p>
+            <p>{this.props.description}</p>
             <button className='btn'>Order Now</button>
         </div>
       </div>
